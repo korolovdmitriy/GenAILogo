@@ -2,7 +2,7 @@ const logoModel = require("../models/logoModel");
 
 async function generateLogo(req, res) {
   const { text, style } = req.body;
-  const prompt = `Generate a logo description with the text ${text} and style ${style}`;
+  const prompt = `Generate a logo description with the text "${text}" and style "${style}".`;
 
   try {
     const logoDescription = await logoModel.generateLogoDescription(prompt);
